@@ -4,7 +4,7 @@ Set the name property of a function.
 
 ## Synopsis
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![npm version](https://img.shields.io/npm/v/@critocrito/namefn.svg?style=flat)](https://www.npmjs.com/package/@critocrito/namefn) [![Build Status](https://travis-ci.org/critocrito/@critocrito/namefn.svg?branch=master)](https://travis-ci.org/critocrito/@critocrito/namefn) [![Coverage Status](https://coveralls.io/repos/github/critocrito/@critocrito/namefn/badge.svg)](https://coveralls.io/github/critocrito/@critocrito/namefn)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![npm version](https://img.shields.io/npm/v/@critocrito/namefn.svg?style=flat)](https://www.npmjs.com/package/@critocrito/namefn) [![Build Status](https://travis-ci.org/critocrito/namefn.svg?branch=master)](https://travis-ci.org/critocrito/namefn) [![Coverage Status](https://coveralls.io/repos/github/critocrito/namefn/badge.svg)](https://coveralls.io/github/critocrito/namefn)
 
 When programmatically generating functions in JavaScript, they often lack a
 name. This reduces the usability of using those functions in a REPL. `namefn`
