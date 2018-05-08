@@ -1,29 +1,75 @@
-# namefn
+# `namefn`
+
+Set the name property of a function.
 
 ## Synopsis
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![npm version](https://img.shields.io/npm/v/namefn.svg?style=flat)](https://www.npmjs.com/package/namefn) [![Build Status](https://travis-ci.org/critocrito/namefn.svg?branch=master)](https://travis-ci.org/critocrito/namefn) [![Coverage Status](https://coveralls.io/repos/github/critocrito/namefn/badge.svg)](https://coveralls.io/github/critocrito/namefn)
 
+When programmatically generating functions in JavaScript, they often lack a
+name. This reduces the usability of using those functions in a REPL. `namefn`
+is a little helper to set the names of functions at construction time.
 
-## Development
+## Installation
 
-### Build targets
+```sh
+npm install namefn
+```
 
-The following `npm run` targets are available:
+## Usage
 
-- `test`: Run all tests in `test`.
-- `test:watch`: Run the tests in watch mode.
-- `coverage`: Run the tests and generate a coverage report.
-- `compile`: Compile all sources into the `dist` directory.
-- `compile:watch`: Watch for changes in the sources and trigger a compile.
-- `lint`: Check the coding style.
-- `fix`: Automatically reformat and fix the coding style.
-- `flow`: Run the type checker.
-- `flow-types`: Install libdefs of dependencies.
-- `flow-coverage`: Generate a flow coverage report.
-- `build`: Make a full build. Lint, test, type check and compile.
-- `release`: Prepare a new release and bump the version number.
-- `release-candidate`: Make a new rc pre-release.
-- `clean`: Remove compiled sources.
-- `security-scan`: Check dependencies in package.json for known
-  vulnerabilities. This doesn't check dependencies of dependencies.
+```js
+import namefn from "namefn";
+
+const f = namefn("identity", x => x);
+console.log(f.name); // identity
+f; // [Function: identity]
+```
+
+## Examples
+
+```js
+import namefn from "namefn";
+
+const f = x => () => x;
+
+const g = f(23);
+console.log(g.name); // ""
+g; // ""
+
+const constant23 = namefn("constant23", f(23));
+console.log(constant23.name); // "constant23"
+constant23; // "[Function: constant23]"
+```
+
+The following example implements a `curry` function, and includes the number
+of missing arguments in the function name.
+
+```js
+import nameFn from "namefn";
+
+const curry = n => {
+  const localCurry = (name, f, ...args) => {
+    const g = (...largs) => {
+      const rest = args.concat(largs);
+
+      if (rest.length < n) return localCurry(name, f, ...rest);
+      return f(...rest);
+    };
+    return namefn(`${name}-${n - args.length}`, g);
+  };
+
+  return namefn(`curry${n}`, localCurry);
+};
+const curry2 = curry(2);
+
+const map = curry2("map", (f, xs) => xs.map(f));
+map; // [Function: map-2]
+
+const addOne = map(i => i + 1);
+addOne; // [Function: map-1]
+```
+
+## License
+
+[GPL 3.0 licensed](LICENSE)

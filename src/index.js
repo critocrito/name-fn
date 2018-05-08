@@ -1,18 +1,8 @@
 // @flow
 
-class A<T> {
-  value: T;
+const nameFn = (name: string, fn: () => mixed): (() => mixed) => {
+  Object.defineProperty(fn, "name", {value: name, configureable: true});
+  return fn;
+};
 
-  constructor(val: T) {
-    this.value = val;
-  }
-
-  method() {
-    if (this.value === 23) {
-      throw new Error("Boom!");
-    }
-    return this.value;
-  }
-}
-
-export default A;
+export default nameFn;
