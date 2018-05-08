@@ -46,7 +46,7 @@ The following example implements a `curry` function, and includes the number
 of missing arguments in the function name.
 
 ```js
-import nameFn from "namefn";
+import namefn from "namefn";
 
 const curry = n => {
   const localCurry = (name, f, ...args) => {
