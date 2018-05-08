@@ -1,6 +1,6 @@
 {
   "name": "name-fn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Set the name property of a function.",
   "main": "dist/index.js",
   "module": "src/index.js",
