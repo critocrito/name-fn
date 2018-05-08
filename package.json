@@ -1,5 +1,5 @@
 {
-  "name": "@critocrito/name-fn",
+  "name": "@critocrito/namefn",
   "version": "0.1.2",
   "description": "Set the name property of a function.",
   "main": "dist/index.js",
@@ -38,7 +38,7 @@
     "functions"
   ],
   "author": "Christo <christo@cryptodrunks.net>",
-  "homepage": "https://github.com/critocrito/name-fn#readme",
+  "homepage": "https://github.com/critocrito/namefn#readme",
   "license": "GPL-3.0",
   "devDependencies": {
     "ava": "^0.25.0",

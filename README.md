@@ -1,25 +1,25 @@
-# `name-fn`
+# `namefn`
 
 Set the name property of a function.
 
 ## Synopsis
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![npm version](https://img.shields.io/npm/v/name-fn.svg?style=flat)](https://www.npmjs.com/package/name-fn) [![Build Status](https://travis-ci.org/critocrito/name-fn.svg?branch=master)](https://travis-ci.org/critocrito/name-fn) [![Coverage Status](https://coveralls.io/repos/github/critocrito/name-fn/badge.svg)](https://coveralls.io/github/critocrito/name-fn)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![npm version](https://img.shields.io/npm/v/@critocrito/namefn.svg?style=flat)](https://www.npmjs.com/package/@critocrito/namefn) [![Build Status](https://travis-ci.org/critocrito/@critocrito/namefn.svg?branch=master)](https://travis-ci.org/critocrito/@critocrito/namefn) [![Coverage Status](https://coveralls.io/repos/github/critocrito/@critocrito/namefn/badge.svg)](https://coveralls.io/github/critocrito/@critocrito/namefn)
 
 When programmatically generating functions in JavaScript, they often lack a
-name. This reduces the usability of using those functions in a REPL. `name-fn`
+name. This reduces the usability of using those functions in a REPL. `namefn`
 is a little helper to set the names of functions at construction time.
 
 ## Installation
 
 ```sh
-npm install @critocrito/name-fn
+npm install @critocrito/namefn
 ```
 
 ## Usage
 
 ```js
-import namefn from "@critocritoname-fn";
+import namefn from "@critocrito/namefn";
 
 const f = namefn("identity", x => x);
 console.log(f.name); // identity
@@ -29,7 +29,7 @@ f; // [Function: identity]
 ## Examples
 
 ```js
-import namefn from "@critocrito/name-fn";
+import namefn from "@critocrito/namefn";
 
 const f = x => () => x;
 
@@ -46,7 +46,7 @@ The following example implements a `curry` function, and includes the number
 of missing arguments in the function name.
 
 ```js
-import namefn from "@critocrito/name-fn";
+import namefn from "@critocrito/namefn";
 
 const curry = n => {
   const localCurry = (name, f, ...args) => {
