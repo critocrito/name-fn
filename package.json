@@ -1,6 +1,6 @@
 {
   "name": "@critocrito/namefn",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Set the name property of a function.",
   "main": "dist/index.js",
   "module": "src/index.js",
