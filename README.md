@@ -13,13 +13,13 @@ is a little helper to set the names of functions at construction time.
 ## Installation
 
 ```sh
-npm install name-fn
+npm install @critocrito/name-fn
 ```
 
 ## Usage
 
 ```js
-import namefn from "name-fn";
+import namefn from "@critocritoname-fn";
 
 const f = namefn("identity", x => x);
 console.log(f.name); // identity
@@ -29,7 +29,7 @@ f; // [Function: identity]
 ## Examples
 
 ```js
-import namefn from "name-fn";
+import namefn from "@critocrito/name-fn";
 
 const f = x => () => x;
 
@@ -46,7 +46,7 @@ The following example implements a `curry` function, and includes the number
 of missing arguments in the function name.
 
 ```js
-import namefn from "name-fn";
+import namefn from "@critocrito/name-fn";
 
 const curry = n => {
   const localCurry = (name, f, ...args) => {
