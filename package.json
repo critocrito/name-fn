@@ -25,7 +25,7 @@
     "lint": "eslint test src",
     "prepublishOnly": "yarn build",
     "prerelease": "yarn build",
-    "release": "standard-version -i CHANGELOG.md -m \"chore(release): Bumped to version %s.\" --sign",
+    "release": "standard-version -i CHANGELOG.md -m \"chore(release): bumped to version %s\" --sign",
     "test": "ava",
     "test:coverage": "nyc yarn test",
     "test:watch": "yarn test -w"
