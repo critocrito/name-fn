@@ -1,10 +1,9 @@
 .DS_STORE
 package-lock.json
-yarn.lock
 node_modules
 *.log*
 flow-typed
-flow-coverage
+coverage
 dist
 .npmrc
 .eslintcache
