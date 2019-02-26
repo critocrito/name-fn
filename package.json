@@ -34,7 +34,7 @@
     "@build-chores/babel-preset": "0.7.0",
     "@build-chores/commitlint": "0.7.0",
     "@build-chores/eslint-config-lint": "0.7.0",
-    "@build-chores/staged": "0.7.0",
+    "@build-chores/staged": "0.8.0",
     "@build-chores/test": "0.7.0",
     "ava": "1.0.1",
     "ava-jsverify": "^1.0.3",
