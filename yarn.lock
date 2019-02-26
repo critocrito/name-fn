@@ -893,10 +893,10 @@
     "@babel/preset-env" "^7.1.0"
     "@babel/preset-flow" "^7.0.0"
 
-"@build-chores/commitlint@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@build-chores/commitlint/-/commitlint-0.7.0.tgz#2fd1b0914b96c1772ff53a31f1b001ed44415dc1"
-  integrity sha512-clUCuCVvvpWbQ1jv8Sw56QM42ZhCouB6lKcBOVdMqO4h+vQ1RsT/MeOmMfMXvn7eg8zOi2ueFjy/ZOlBKIp9PQ==
+"@build-chores/commitlint@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@build-chores/commitlint/-/commitlint-0.8.0.tgz#9138c9dc5bc17a1bc9e111827b8404ddbbe4cf26"
+  integrity sha512-P3S/m/P1vJqubtJEnSSpihqmGZ/Q1hELhV2brtvD+0eOo1RPqQLVc0KsoWSKoVJQtwaqFlgL3Y3h+1wrlbV+Pg==
   dependencies:
     "@commitlint/cli" "^7.2.0"
     "@commitlint/config-conventional" "^7.1.2"
