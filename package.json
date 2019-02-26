@@ -35,7 +35,7 @@
     "@build-chores/commitlint": "0.7.0",
     "@build-chores/eslint-config-lint": "0.7.0",
     "@build-chores/staged": "0.7.0",
-    "@build-chores/test": "0.7.0",
+    "@build-chores/test": "0.8.0",
     "ava": "1.0.1",
     "ava-jsverify": "^1.0.3",
     "coveralls": "^3.0.0",
